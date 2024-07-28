@@ -8,7 +8,7 @@ for i in $(seq 1 $1); do
 sleep 1
 done
 
-code
+notepad.exe 20-20-20.txt
 
 repeat="tmp"
 
