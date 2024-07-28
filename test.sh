@@ -1,6 +1,8 @@
 #!/bin/sh
 
-var=$(( 5 % 3 ))
+five=5
+three=3
+var=$(( $five - $three ))
 
 if [ $var -eq 2 ]; then
 echo "test complete"
