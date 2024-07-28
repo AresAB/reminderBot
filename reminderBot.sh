@@ -1,14 +1,22 @@
 #!/bin/sh
 
-#while true; do
-echo $1
-echo $SECONDS
-timer=$(( $SECONDS - $1 ))
-timer=$(( $timer % 5 ))
+repeat="y"
 
-if [ $timer -eq 0 ]; then
-echo "timer reached"
-fi
+while [ $repeat = "y" ]; do
 
+for i in $(seq 1 $1); do
 sleep 1
-#done
+done
+
+code
+
+repeat="tmp"
+
+while [ $repeat != "y" ] && [ $repeat != "n" ]; do
+
+echo "Repeat? [y/n]"
+read repeat
+
+done
+
+done
