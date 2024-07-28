@@ -1,5 +1,7 @@
 #!/bin/sh
 
-offset=$1
+let timer=$SECONDS%$1
 
-if [[$SECONDS - $offset]]
+if [ $timer -eq 0 ]; then
+echo "timer reached"
+fi
