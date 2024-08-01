@@ -8,7 +8,7 @@ Basic bash script for making a notification every x number of seconds, utilizes 
 
 # flags:
 
-##### `-r | --repeat` -> Skips the repeat message and will not stop repeating until forcibly stopped
+#### `-r | --repeat` -> Skips the repeat message and will not stop repeating until forcibly stopped
 
 ex:
 
@@ -17,7 +17,7 @@ ex:
 
 
 
-##### `-m | --minute` -> Converts the first input as minutes, and allows for a second input which will be treated as seconds
+#### `-m | --minute` -> Converts the first input as minutes, and allows for a second input which will be treated as seconds
 
 ex:
 
