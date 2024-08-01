@@ -8,14 +8,16 @@ Basic bash script for making a notification every x number of seconds, utilizes 
 
 # flags:
 
-### `-r | --repeat` -> Skips the repeat message and will not stop repeating until forcibly stopped
+##### `-r | --repeat` -> Skips the repeat message and will not stop repeating until forcibly stopped
 
 ex:
 
 `$ reminderBot -r 30` -> Opens up a notepad with a reminder after 30 seconds, repeats after notepad is closed
 
 
-### `-m | --minute` -> Converts the first input as minutes, and allows for a second input which will be treated as seconds
+
+
+##### `-m | --minute` -> Converts the first input as minutes, and allows for a second input which will be treated as seconds
 
 ex:
 
