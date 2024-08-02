@@ -2,9 +2,9 @@ Basic bash script for making a notification every x number of seconds, utilizes 
 
 # Use:
 
-    `$ reminderBot 30` -> Opens up notepad with a reminder after 30 seconds
+    `$ reminderBot reminderText 30` -> Sends a windows notification with the text "reminderText" after 30 seconds
 
-    `Repeat? [y/n]` -> After each reminder, it will ask if you want it to repeat
+    `Repeat? [y/n]` -> After each notification, it will ask if you want it to repeat
 
 # flags:
 
@@ -12,17 +12,17 @@ Basic bash script for making a notification every x number of seconds, utilizes 
 
 ex:
 
-`$ reminderBot -r 30` -> Opens up a notepad with a reminder after 30 seconds, repeats after notepad is closed
+`$ reminderBot -r message 30` -> Sends a windows notification with the text "message" after 30 seconds, repeats after notepad is closed
 
 
-### `-m | --minute` -> Converts the first input as minutes, and allows for a second input which will be treated as seconds
+### `-m | --minute` -> Converts the first input as minutes, and allows for a third input which will be treated as seconds
 
 ex:
 
-`$ reminderBot -m 10` -> Opens up a notepad with a reminder after 10 minutes
+`$ reminderBot -m message 10` -> Sends a windows notification with the text "message" after 10 minutes
 
-`Repeat? [y/n]` -> After each reminder, it will ask if you want it to repeat
+`Repeat? [y/n]` -> After each notification, it will ask if you want it to repeat
 
-`$ reminderBot -m 10 30` -> Opens up a notepad with a reminder after 10 minutes and 30 seconds
+`$ reminderBot -m message 10 30` -> Sends a windows notification with the text "message" after 10 minutes and 30 seconds
 
-`Repeat? [y/n]` -> After each reminder, it will ask if you want it to repeat
+`Repeat? [y/n]` -> After each notification, it will ask if you want it to repeat

@@ -21,9 +21,13 @@ FlagHandler(){
 	done
 }
 
-while [ $# -gt 1 ]; do
+if [ $# -lt 2 ]; then
+    exit 1
+fi
+
+while [ $# -gt 2 ]; do
     if [ $expecting_m_input == true ]; then
-		input=$1
+		textTMP=$1
 		expecting_m_input=false
 		continue
 	fi
@@ -31,10 +35,12 @@ while [ $# -gt 1 ]; do
 	shift
 done
 
-timeMax=$1
+text=$1
+timeMax=$2
 if [ $m_flag == true ]; then
     if [ $expecting_m_input == false ]; then
-        minutes=$(( $input * 60 ))
+        text=$textTMP
+        minutes=$(( $1 * 60 ))
         timeMax=$(( $timeMax + $minutes ))
     else
         timeMax=$(( $timeMax * 60 ))
@@ -52,7 +58,7 @@ while [ $repeat = "y" ]; do
         sleep 1
     done
 
-    ./win-notify-send.bat 20-20-20
+    ./win-notify-send.bat $text
     repeat=$repeatReset
 
     while [ $repeat != "y" ] && [ $repeat != "n" ]; do
