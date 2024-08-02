@@ -52,7 +52,7 @@ while [ $repeat = "y" ]; do
         sleep 1
     done
 
-    notepad.exe 20-20-20.txt
+    ./win-notify-send.bat 20-20-20
     repeat=$repeatReset
 
     while [ $repeat != "y" ] && [ $repeat != "n" ]; do
